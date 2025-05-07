@@ -54,7 +54,13 @@ namespace ClassesAndDataStructures
             //studentDictionary.Add("teacher1", teacher1); // This will not compile because teacher1 is not a Student
 
             SuperList<Student> superList = new SuperList<Student>();
-            superList.Add(student1);
+            superList.Push(student1);
+            superList.Push(student2);
+            Student student = superList.Get(0);
+            Student poppedStudent = superList.Pop();
+
+            Console.WriteLine($"Popped student: {poppedStudent.Name} {poppedStudent.Surname}");
+            Console.WriteLine($"Student: {student.Name} {student.Surname}");
         }
     }
 }
